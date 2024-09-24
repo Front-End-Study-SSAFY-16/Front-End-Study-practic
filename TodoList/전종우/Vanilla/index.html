@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TO DO LIST</title>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <!-- MAIN -->
+    <main>
+      <section>
+        <h1 id="main-title" class="text-center">TO DO LIST</h1>
+        <div id="board-container">
+          <div id="board-header">
+            <h3>전종우님의<br />브리핑 보드</h3>
+          </div>
+          <div id="board-body">
+            <div id="list-contents">
+              <h3>투 두 리스트가 없습니다.</h3>
+            </div>
+          </div>
+          <div id="board-footer">
+            <button onclick="openListMaker()">일정 추가하기</button>
+          </div>
+        </div>
+      </section>
+      <aside>
+        <div id="list-maker" class="flex-col-container">
+          <div>
+            <h1>할 일을 등록해 주세요.</h1>
+          </div>
+          <div>
+            <div class="flex-row-container">
+              <label for="to-do-date">📅</label>
+              <input id="to-do-date" type="date" />
+            </div>
+            <div class="flex-row-container">
+              <label for="to-do-content">📝</label>
+              <textarea name="to-do-content" id="to-do-content"></textarea>
+            </div>
+          </div>
+          <div>
+            <div id="list-maker-buttons">
+              <button onclick="addEntity()">등록</button>
+              <button onclick="closeListMaker()">취소</button>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </main>
+    <script src="js/to_do_list.js"></script>
+  </body>
+</html>

@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+main {
+  padding: 2rem;
+}
+
+#main-title {
+  font-size: 5rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.flex-row-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.flex-col-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+#board-container {
+  width: 60rem;
+  height: 80rem;
+  border: 0.1rem solid silver;
+  box-shadow: 0.3rem 0.3rem 0.5rem gray;
+  border-radius: 2rem;
+  margin: 2rem auto;
+}
+
+#board-header {
+  margin: 3rem;
+}
+
+#board-body {
+  width: 50rem;
+  height: 60rem;
+  margin: 3rem auto;
+  text-align: center;
+  line-height: 60rem;
+}
+
+#board-footer {
+  margin: 3rem;
+}
+
+#board-footer button {
+  width: 10rem;
+  height: 3rem;
+}
+
+#list-maker {
+  display: none;
+  position: fixed;
+  background-color: white;
+  top: 15rem;
+  left: 5rem;
+  width: 40rem;
+  height: 40rem;
+  border: 0.1rem solid silver;
+  box-shadow: 0.3rem 0.3rem 0.5rem gray;
+  border-radius: 2rem;
+  padding: 2rem;
+}
+
+#list-maker div {
+  margin: 2rem 0;
+}
+
+label {
+  margin: 0 1.5rem;
+}
+
+#list-maker textarea {
+  width: 28rem;
+  height: 16rem;
+  padding: 1rem;
+}
+
+#list-maker-buttons {
+  text-align: center;
+}
+
+#list-maker-buttons button {
+  width: 12rem;
+  height: 3rem;
+  margin: 1rem 1rem;
+}
