@@ -1,9 +1,9 @@
 let list = [];
 
-function openListMaker() {
+function toggleListMaker(open) {
   let listMaker = document.getElementById("list-maker");
 
-  listMaker.setAttribute("style", "display: block");
+  listMaker.setAttribute("style", open ? "display: block" : "display: none");
 }
 
 function addEntity() {
@@ -14,6 +14,11 @@ function addEntity() {
   };
 
   list.push(obj);
+  updateList();
+  toggleListMaker(false);
+}
+
+function updateList() {
   list.sort((a, b) => {
     if (a.finished === b.finished) {
       return a.date < b.date ? -1 : 1;
@@ -44,30 +49,21 @@ function addEntity() {
       <button><img src="img/CloseButton.png" alt=""></button>
     </div>
     `;
-    listContents.appendChild(div);
 
     let buttons = div.querySelectorAll("button");
 
     // Complete Button
     buttons[0].addEventListener("click", function () {
       list[i].finished = 1;
-      div.setAttribute("style", "background-color: silver;");
+      updateList();
     });
 
     // Remove Button
     buttons[1].addEventListener("click", function () {
-      list[i].remove();
-      div.remove();
+      list.splice(i, 1);
+      updateList();
     });
+
+    listContents.appendChild(div);
   }
-}
-
-function checkEntity() {}
-
-function removeEntity() {}
-
-function closeListMaker() {
-  let listMaker = document.getElementById("list-maker");
-
-  listMaker.setAttribute("style", "display: none");
 }

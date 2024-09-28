@@ -134,7 +134,13 @@ main {
 }
 
 button {
+  background-color: white;
+  border: 0.4rem solid rgb(0, 0, 0);
   cursor: pointer;
+}
+
+button:hover {
+  background-color: rgb(235, 235, 235);
 }
 
 .to_do_list-box button {
@@ -152,8 +158,8 @@ button {
 }
 
 #board-footer button {
-  width: 10rem;
-  height: 3rem;
+  width: 12rem;
+  height: 3.5rem;
 }
 
 #list-maker {
@@ -191,5 +197,5 @@ label {
 #list-maker-buttons button {
   width: 12rem;
   height: 3rem;
-  margin: 1rem 1rem;
+  margin: 1rem;
 }
