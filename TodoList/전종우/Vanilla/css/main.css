@@ -52,6 +52,13 @@ main {
   flex-wrap: wrap;
 }
 
+.flex-row-between-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
 .flex-col-container {
   display: flex;
   flex-direction: column;
@@ -87,7 +94,12 @@ main {
 }
 
 #board-header {
-  margin: 3rem;
+  margin: 2rem 2rem 0;
+}
+
+#list-info {
+  margin-top: 1rem;
+  text-align: right;
 }
 
 #board-body {
@@ -96,7 +108,7 @@ main {
   background-color: rgb(235, 235, 235);
   border: 0.4rem solid rgb(0, 0, 0);
   border-radius: 2rem;
-  margin: 1rem auto;
+  margin: 1rem auto 0;
   overflow-y: auto;
 }
 
@@ -110,11 +122,11 @@ main {
   box-shadow: 0.3rem 0.3rem 0.5rem gray;
   margin: 2rem auto;
   padding: 0.5rem;
+  transition-duration: 0.2s;
 }
 
 .to_do_list-box:hover {
   transform: scale(1.05);
-  transition-duration: 0.2s;
 }
 
 .list-content {
@@ -134,7 +146,15 @@ main {
 }
 
 button {
+  background-color: white;
+  border: 0.4rem solid rgb(0, 0, 0);
   cursor: pointer;
+  transition-duration: 0.2s;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background-color: rgb(235, 235, 235);
 }
 
 .to_do_list-box button {
@@ -148,12 +168,12 @@ button {
 }
 
 #board-footer {
-  margin: 3rem;
+  margin: 2rem;
 }
 
 #board-footer button {
-  width: 10rem;
-  height: 3rem;
+  width: 12rem;
+  height: 3.5rem;
 }
 
 #list-maker {
@@ -168,6 +188,7 @@ button {
   border-radius: 2rem;
   box-shadow: 0.3rem 0.3rem 0.5rem gray;
   padding: 2rem;
+  /* animation: openModal 0.5s; */
 }
 
 #list-maker div {
@@ -191,5 +212,43 @@ label {
 #list-maker-buttons button {
   width: 12rem;
   height: 3rem;
-  margin: 1rem 1rem;
+  margin: 1rem;
+}
+
+#modify-entity-button {
+  display: none;
+}
+
+@keyframes openModal {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  80% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes closeModal {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  20% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
 }
