@@ -1,0 +1,135 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-image: url('../img/background_img.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#header-container {
+    padding: 10px;
+    text-align: center;
+    text-shadow: -1px -1px 2px rgba(0, 0, 0, 0.5);
+    color:rgb(243, 235, 228);
+}
+
+#calendar-container {
+    background-color: rgba(190, 201, 211, 0.2);
+    display: flex;
+    justify-content: center;
+}
+
+#calendar {
+    background-color: white;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+}
+
+#calendar h2{
+    text-align: center;
+}
+
+#todo-list-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#input-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-top: 20px;
+    background-color:rgb(235, 241, 241);
+    border-radius: 20px;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
+    width: 500px;
+}
+
+#todo-input {
+    width: 340px;
+}
+
+#add-todo-button {
+    background-color: rgb(64, 133, 64);
+    border: none;
+    border-radius: 5px;
+}
+
+#add-todo-button:hover {
+    background-color: rgb(48, 100, 48);
+}
+
+#todo-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 0;
+}
+
+#todo-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(235, 241, 241);
+    width: 500px;
+    list-style: none;
+    padding: 10px;
+    margin: 10px auto;
+    border-radius: 20px;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
+}
+
+#todo-list li button {
+    border: none;
+    background-color: rgb(197, 80, 60);
+    border-radius: 5px;
+}
+
+#todo-list li button:hover {
+    background-color: rgb(151, 61, 45);
+    border-radius: 5px;
+}
+
+#current-date {
+    font-weight: bold;
+    font-style: italic;
+    color: rgb(53, 50, 50);
+    /*text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);*/
+}
+
+#calendar table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 10px;
+}
+
+#calendar td {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: white;
+    transition: background-color 0.3s ease;
+}
+
+#calendar td:hover {
+    background-color: #f0f0f0;
+}
+
+#calendar td.selected {
+    background-color: #47a6ff;
+    color: white;
+}
