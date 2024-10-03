@@ -18,6 +18,15 @@
               <br />
               브리핑 보드
             </h3>
+            <p id="list-info">0개의 리스트</p>
+            <form id="view-type-form">
+              <input type="radio" name="view-type" id="view-all" value="view-all" checked />
+              <label for="view-all">전체</label>
+              <input type="radio" name="view-type" id="view-to-do" value="view-to-do" />
+              <label for="view-to-do">남은 리스트</label>
+              <input type="radio" name="view-type" id="view-complete" value="view-complete" />
+              <label for="view-complete">해결한 리스트</label>
+            </form>
           </div>
           <div id="board-body">
             <div id="list-contents"></div>
@@ -39,12 +48,17 @@
             </div>
             <div class="flex-row-container">
               <label for="to-do-content">📝</label>
-              <textarea name="to-do-content" id="to-do-content"></textarea>
+              <textarea
+                name="to-do-content"
+                id="to-do-content"
+                placeholder="할 일을 입력하세요."
+              ></textarea>
             </div>
           </div>
           <div>
             <div id="list-maker-buttons">
-              <button onclick="addEntity()">등록</button>
+              <button id="add-entity-button" onclick="addEntity()">등록 하기</button>
+              <button id="modify-entity-button">수정 하기</button>
               <button onclick="toggleListMaker(false)">취소</button>
             </div>
           </div>
