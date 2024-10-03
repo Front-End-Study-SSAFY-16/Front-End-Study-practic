@@ -2,29 +2,29 @@ document.addEventListener('DOMContentLoaded', function () {
     function makeCalendar() {
         var calendarContainer = document.getElementById("calendar");
         var currentDate = new Date();
-    
+
         var year = currentDate.getFullYear();
         var month = currentDate.getMonth();
-    
+
         var calendar = `<h2>${year}년 ${month + 1}월</h2>`;
         calendar += `<table>`;
         calendar += `<tr>`;
-        
+
         const daysOfWeek = ['일', '월', '화', '수', '목', '금', '토'];
         for (let day of daysOfWeek) {
             calendar += `<th>${day}</th>`;
         }
-    
+
         calendar += `</tr>`;
-    
+
         const totalDaysInMonth = new Date(year, month + 1, 0).getDate();
         const firstDayOfMonth = new Date(year, month, 1).getDay();
-    
+
         let dayCount = 1;
-    
+
         for (let i = 0; i < 6; i++) {
             calendar += `<tr>`;
-    
+
             for (let j = 0; j < 7; j++) {
                 if (i === 0 && j < firstDayOfMonth) {
                     calendar += `<td></td>`;
@@ -35,16 +35,16 @@ document.addEventListener('DOMContentLoaded', function () {
                     dayCount++;
                 }
             }
-    
+
             calendar += `</tr>`;
-    
+
             if (dayCount > totalDaysInMonth) {
                 break;
             }
         }
-    
+
         calendar += `</table>`;
-    
+
         calendarContainer.innerHTML = calendar;
 
         var days = document.querySelectorAll(".calendar-day");
@@ -60,7 +60,6 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         });
     }
-    
 
     makeCalendar();
 
@@ -91,12 +90,43 @@ document.addEventListener('DOMContentLoaded', function () {
         if (todos[date]) {
             todos[date].forEach((todo, index) => {
                 const li = document.createElement('li');
-                li.textContent = todo;
+
+                const todoText = document.createElement('span');
+                todoText.textContent = todo;
+                const buttonsDiv = document.createElement('div');
+                const editInput = document.createElement('input');
+                editInput.type = 'text';
+                editInput.value = todo;
+                editInput.style.display = 'none';
 
                 const deleteButton = document.createElement('button');
                 deleteButton.textContent = '삭제';
+                deleteButton.id = 'delete-button';
                 deleteButton.onclick = () => removeTodoItem(date, index);
-                li.appendChild(deleteButton);
+
+                const editButton = document.createElement('button');
+                editButton.textContent = '수정';
+                editButton.id = 'update-button';
+                editButton.onclick = () => {
+                    if (editInput.style.display === 'none') {
+                        todoText.style.display = 'none';
+                        editInput.style.display = 'inline';
+                        editButton.textContent = '저장';
+                    } else {
+                        const updatedTodo = editInput.value.trim();
+                        if (updatedTodo) {
+                            todos[date][index] = updatedTodo;
+                            localStorage.setItem('todos', JSON.stringify(todos));
+                            loadTodoList(date);
+                        }
+                    }
+                };
+
+                buttonsDiv.appendChild(editButton);
+                buttonsDiv.appendChild(deleteButton);
+                li.appendChild(todoText);
+                li.appendChild(editInput);
+                li.appendChild(buttonsDiv);
 
                 todoListContainer.appendChild(li);
             });
