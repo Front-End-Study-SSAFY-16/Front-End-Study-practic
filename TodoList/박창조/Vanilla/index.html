@@ -2,8 +2,58 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TodoList</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <header>
+        <span class="title">T</span>
+        <span class="title">o</span>
+        <span class="title">D</span>
+        <span class="title">o</span>
+        <span class="title">L</span>
+        <span class="title">i</span>
+        <span class="title">s</span>
+        <span class="title">t</span>
+      </header>
+      <!--  -->
+      <nav>
+        <ul class="list">
+          <!--  -->
+          <li id="${id}" class="todo">
+            <div class="data-box">
+              <span class="date">2024-10-01</span>
+              <input class="todo_input" type="text" value="${value}" disabled />
+            </div>
+            <div class="menu">
+              <span>...</span>
+              <div class="btn-box">
+                <button class="updateBtn">수정</button>
+                <button class="completeBtn disable">완료</button>
+                <button class="deleteBtn">삭제</button>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </nav>
+
+      <!--  -->
+      <div id="inputBox" class="input-box">
+        <div class="left"></div>
+        <div class="middle">
+          <form class="todoForm">
+            <input
+              id="todoInput"
+              type="text"
+              placeholder="Todo...입력 후 Enter"
+            />
+          </form>
+        </div>
+        <div class="right"></div>
+      </div>
+      <!--  -->
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>
