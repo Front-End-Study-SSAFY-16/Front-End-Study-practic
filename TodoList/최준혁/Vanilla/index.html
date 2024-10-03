@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo</title>
+    <link rel="stylesheet" href="css/style.css"/>
+    <script src="js/main.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div id="header-container">
+            <h1>Todo List</h1>
+        </div>
+
+        <div id="calendar-container">
+            <div id="calendar"></div>
+        </div>
+
+        <div id="todo-list-container">
+            <div id="input-container">
+                <span id="current-date">날짜</span>
+                <span>
+                    <input type="text" id="todo-input" placeholder="할일" />
+                    <button id="add-todo-button">추가</button>
+                </span>
+            </div>
+
+            <div id="list-container">
+                <h2 id="selected-date"></h2>
+                <ul id="todo-list"></ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
