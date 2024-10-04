@@ -66,18 +66,18 @@ const setForm = (e) => {
 function insertTodo(id, value) {
   ul.innerHTML += `
       <li id="${id}" class="todo">
-          <input
-            class="todo_input"
-            type="text"
-            value="${value}"
-            disabled
-          />
-          <div class="btn-box">
-            <button class="updateBtn">수정</button>
-            <button class="completeBtn disable">완료</button>
-            <button class="deleteBtn">삭제</button>
-          </div>
-      </li>
+            <div class="data-box">
+              <span class="date">2024-10-01</span>
+              <input class="todo_input" type="text" value="${value}" disabled />
+            </div>
+            <div class="menu">
+              <div class="btn-box">
+                <button class="updateBtn">수정</button>
+                <button class="completeBtn disable">완료</button>
+                <button class="deleteBtn">삭제</button>
+              </div>
+            </div>
+          </li>
   `;
 
   const updateBtn = document.querySelector('.updateBtn');

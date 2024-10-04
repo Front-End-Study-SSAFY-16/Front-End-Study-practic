@@ -126,7 +126,6 @@ nav .list .todo {
   justify-content: center;
   align-items: flex-end;
   gap: 0.5rem;
-  background-color: aqua;
 }
 
 .btn-box button {
