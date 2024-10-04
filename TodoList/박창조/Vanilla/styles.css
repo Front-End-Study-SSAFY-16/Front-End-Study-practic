@@ -1,0 +1,245 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ol,
+ul,
+li {
+  list-style: none;
+}
+
+:root {
+  --bgColor-color-1: #F8EDE3;
+  --bgColor-color-2: #DFD3C3;
+  --bgColor-color-3: #D0B8A8;
+  --bgColor-color-4: #C5705D;
+}
+
+body {
+  background-color: var(--bgColor-color-1);
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+
+  padding: 4rem 0;
+}
+
+header {
+  font-size: 3rem;
+  font-weight: 500;
+  font-family: Verdana;
+}
+
+/*   */
+
+nav {
+  flex: 1;
+  width: 70%;
+  overflow: auto;
+}
+
+nav .list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+}
+
+nav .list .todo {
+  width: 700px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  padding: 0.5rem 2rem;
+  animation: insert 1s ease;
+  transition: all 300ms ease-in-out;
+  cursor: pointer;
+}
+
+.todo:hover {
+  background-color: #dfd3c349;
+}
+
+.menu {
+  border-radius: 10px;
+  transition: all 200ms ease-in-out;
+  padding: 0.3rem;
+  position: relative;
+}
+
+.menu:hover {
+  background-color: #C5705D;
+}
+
+.data-box {
+  flex: 1 1 60%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.data-box .date {
+  font-weight: 400;
+  font-family: Geneva;
+}
+
+.data-box .todo_input {
+  font-size: 1.3rem;
+
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 0.7rem;
+}
+
+.todo_input:disabled {
+  background: none;
+}
+
+
+.btn-box {
+  position: absolute;
+  left: 100%;
+  top: 0;
+  z-index: 2;
+
+  width: 100px;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 0.5rem;
+  background-color: aqua;
+}
+
+.btn-box button {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  border: none;
+
+
+  padding: 0.5rem;
+  background-color: var(--bgColor-color-3);
+}
+
+.disable {
+  display: none;
+}
+
+.active {
+  background-color: red;
+}
+
+
+/*   */
+
+.input-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  max-width: 500px;
+  height: 80px;
+  background-color: var(--bgColor-color-2);
+  cursor: pointer;
+  transition: all 200ms ease-in;
+  border-radius: 50px;
+}
+
+
+.left {
+  width: 50px;
+  height: 100%;
+  flex: 1 1 20%;
+  border-radius: 50px 0 0 50px;
+}
+
+.right {
+  width: 50px;
+  height: 100%;
+  flex: 1 1 20%;
+  border-radius: 0 50px 50px 0;
+}
+
+
+.middle {
+  width: 0px;
+  height: 100%;
+  opacity: 0;
+  transition: all 200ms ease-in;
+
+  display: flex;
+  align-items: center;
+}
+
+.open {
+  width: 400px;
+  opacity: 1;
+}
+
+
+.middle #todoInput {
+  width: 100%;
+  height: 70%;
+  background: none;
+
+  font-size: 1.6rem;
+  border: none;
+  outline: none;
+}
+
+.middle #todoInput::placeholder {
+  font-size: 1.5rem;
+}
+
+.todoForm {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+
+@keyframes insert {
+  0% {
+    width: 0px;
+    opacity: 0;
+  }
+
+  25% {
+    width: 50px;
+    opacity: 0;
+  }
+
+  50% {}
+
+  70% {
+    width: 90px;
+    opacity: 0;
+    /* transform: rotate(180deg) */
+  }
+
+  100% {
+    opacity: 1;
+    width: 100%;
+  }
+}
