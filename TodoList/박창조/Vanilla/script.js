@@ -70,7 +70,8 @@ function insertTodo(id, value) {
               <span class="date">2024-10-01</span>
               <input class="todo_input" type="text" value="${value}" disabled />
             </div>
-            <div class="menu">
+            <div class="menu"> 
+              <span>...</span>
               <div class="btn-box">
                 <button class="updateBtn">수정</button>
                 <button class="completeBtn disable">완료</button>
