@@ -1,0 +1,32 @@
+.text-center {
+  text-align: center;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-c {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-jc-c {
+  justify-content: center;
+}
+
+.flex-jc-sa {
+  justify-content: space-around;
+}
+
+.flex-jc-sb {
+  justify-content: space-between;
+}
+
+.flex-ai-c {
+  align-items: center;
+}
+
+.shadow {
+  box-shadow: 0.2rem 0.2rem 0.3rem rgb(211, 211, 211);
+}

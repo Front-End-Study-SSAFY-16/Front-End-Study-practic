@@ -1,0 +1,191 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  height: auto;
+}
+
+header {
+  padding-bottom: 2rem;
+  border: 0.1rem solid rgb(220, 220, 220);
+}
+
+hr {
+  border: 0.1rem solid rgb(220, 220, 220);
+}
+
+nav {
+  height: 8rem;
+  padding: 0 8rem;
+}
+
+nav a {
+  margin-right: 3rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+main {
+  height: 100vh;
+  padding: 3rem;
+}
+
+footer {
+  padding: 2rem 3rem;
+  border: 0.1rem solid rgb(220, 220, 220);
+}
+
+footer a,
+footer p,
+footer span {
+  margin-right: 1rem;
+}
+
+/* ==================================================================== */
+
+#logo_img {
+  width: 10rem;
+}
+
+#language_btn {
+  width: 2rem;
+  margin-right: 3rem;
+}
+
+#user_info_btn {
+  width: 10rem;
+  height: 5rem;
+  padding: 1rem;
+  background-color: white;
+  border: 0.1rem solid rgb(220, 220, 220);
+  border-radius: 3rem;
+}
+
+#user_info_btn svg:first-child {
+  width: 2rem;
+}
+
+#user_info_btn svg {
+  width: 4rem;
+}
+
+#search_bar {
+  width: 80rem;
+  height: 6.5rem;
+  margin: 0 auto;
+  border: 0.1rem solid rgb(220, 220, 220);
+  border-radius: 3rem;
+}
+
+#search_bar > div {
+  margin: 0 3rem;
+}
+
+#search_bar button {
+  width: 5rem;
+  height: 5rem;
+  background-color: #e01660;
+  color: white;
+  font-weight: bold;
+  border-radius: 3rem;
+}
+
+#search_bar button svg {
+  width: 2rem;
+  color: white;
+}
+
+#category_list {
+  width: 120rem;
+  height: 6.5rem;
+  margin: 0 auto;
+  background-color: white;
+  font-size: 1.2rem;
+}
+
+.category_icon {
+  width: 3rem;
+  height: 3rem;
+  margin: 0 3.5rem;
+  background-size: cover;
+  display: inline-block;
+  cursor: pointer;
+}
+
+#filter_btn {
+  width: 10rem;
+  height: 5rem;
+  line-height: 5rem;
+  background-color: white;
+  border: 0.1rem solid rgb(220, 220, 220);
+  border-radius: 1rem;
+}
+
+#filter_btn svg {
+  width: 2rem;
+  margin-right: 1rem;
+}
+
+#additional_desc {
+  font-size: 1.1rem;
+  margin: 1rem 0;
+}
+
+.ct_img1 {
+  background-image: url("../img/컬처 아이콘.png");
+}
+
+.ct_img2 {
+  background-image: url("../img/최고의 전망.jpg");
+}
+
+.ct_img3 {
+  background-image: url("../img/골프장.jpg");
+}
+
+.ct_img4 {
+  background-image: url("../img/그랜드 피아노.jpg");
+}
+
+.ct_img5 {
+  background-image: url("../img/기상천외한 숙소.jpg");
+}
+
+.ct_img6 {
+  background-image: url("../img/담무소.jpg");
+}
+
+.ct_img7 {
+  background-image: url("../img/동굴.jpg");
+}
+
+.ct_img8 {
+  background-image: url("../img/마차.jpg");
+}
+
+.ct_img9 {
+  background-image: url("../img/무장애.jpg");
+}
+
+.ct_img10 {
+  background-image: url("../img/민수.jpg");
+}
