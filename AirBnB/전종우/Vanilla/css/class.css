@@ -4,11 +4,13 @@
 
 .flex {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .flex-c {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
 }
 
 .flex-jc-c {
