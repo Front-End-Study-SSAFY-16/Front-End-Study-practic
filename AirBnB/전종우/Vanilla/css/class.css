@@ -1,3 +1,15 @@
+.fs-12 {
+  font-size: 1.2rem;
+}
+
+.fs-14 {
+  font-size: 1.4rem;
+}
+
+.text-gray {
+  color: gray;
+}
+
 .text-center {
   text-align: center;
 }

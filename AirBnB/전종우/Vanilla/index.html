@@ -10,16 +10,18 @@
   <body>
     <header>
       <nav class="flex flex-jc-sb flex-ai-c">
-        <a href="#">
-          <img id="logo_img" src="img/logo.png" />
-        </a>
         <div>
+          <a href="#">
+            <img class="header__logo" src="img/logo.png" />
+          </a>
+        </div>
+        <div class="text-center">
           <a href="#">숙소</a>
           <a href="#">체험</a>
         </div>
-        <div class="flex flex-ai-c">
-          <a href="#">당신의 공간을 에어비앤비하세요.</a>
-          <button id="language_btn">
+        <div class="userinfo flex flex-ai-c">
+          <a class="fs-14" href="#">당신의 공간을 에어비앤비하세요.</a>
+          <button class="userinfo__langbtn">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -35,52 +37,56 @@
               />
             </svg>
           </button>
-          <button id="user_info_btn" class="flex flex-jc-sa flex-ai-c">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="size-6"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-              />
-            </svg>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-              class="size-6"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M18.685 19.097A9.723 9.723 0 0 0 21.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 0 0 3.065 7.097A9.716 9.716 0 0 0 12 21.75a9.716 9.716 0 0 0 6.685-2.653Zm-12.54-1.285A7.486 7.486 0 0 1 12 15a7.486 7.486 0 0 1 5.855 2.812A8.224 8.224 0 0 1 12 20.25a8.224 8.224 0 0 1-5.855-2.438ZM15.75 9a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"
-                clip-rule="evenodd"
-              />
-            </svg>
-          </button>
+          <div class="userinfo__container flex flex-jc-c flex-ai-c">
+            <button class="userinfo__menubtn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                />
+              </svg>
+            </button>
+            <button class="userinfo__mypagebtn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="size-6"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M18.685 19.097A9.723 9.723 0 0 0 21.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 0 0 3.065 7.097A9.716 9.716 0 0 0 12 21.75a9.716 9.716 0 0 0 6.685-2.653Zm-12.54-1.285A7.486 7.486 0 0 1 12 15a7.486 7.486 0 0 1 5.855 2.812A8.224 8.224 0 0 1 12 20.25a8.224 8.224 0 0 1-5.855-2.438ZM15.75 9a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </button>
+          </div>
         </div>
       </nav>
-      <div id="search_bar" class="flex flex-jc-sa flex-ai-c shadow">
+      <div class="searchbar flex flex-jc-sb flex-ai-c shadow">
         <div>
-          <div>여행지</div>
-          <input type="text" placeholder="여행지" />
+          <div class="fs-12">여행지</div>
+          <input class="searchbar_input" type="text" placeholder="여행지 검색" />
         </div>
         <div>
-          <div>체크인</div>
-          <div>날짜 추가</div>
+          <div class="fs-12">체크인</div>
+          <div class="fs-14 text-gray">날짜 추가</div>
         </div>
         <div>
-          <div>체크아웃</div>
-          <div>날짜 추가</div>
+          <div class="fs-12">체크아웃</div>
+          <div class="fs-14 text-gray">날짜 추가</div>
         </div>
         <div>
-          <div>여행자</div>
-          <div>게스트 추가</div>
+          <div class="fs-12">여행자</div>
+          <div class="fs-14 text-gray">게스트 추가</div>
         </div>
         <button>
           <svg
@@ -100,60 +106,100 @@
     </header>
 
     <main>
-      <div id="category_list" class="flex flex-jc-sb flex-ai-c">
+      <div class="category flex flex-jc-sb flex-ai-c">
         <div class="flex flex-jc-c">
           <div class="text-center">
             <input id="category_1" type="radio" name="category" />
-            <label class="category_icon ct_img1" for="category_1"></label>
-            <p>컬처 아이콘</p>
+            <label class="category__icon ct_img1" for="category_1"></label>
+            <p class="text-gray">골프장</p>
           </div>
           <div class="text-center">
             <input id="category_2" type="radio" name="category" />
-            <label class="category_icon ct_img2" for="category_2"></label>
-            <p>최고의 전망</p>
+            <label class="category__icon ct_img2" for="category_2"></label>
+            <p class="text-gray">그랜드 피아노</p>
           </div>
           <div class="text-center">
             <input id="category_3" type="radio" name="category" />
-            <label class="category_icon ct_img3" for="category_3"></label>
-            <p>골프장</p>
+            <label class="category__icon ct_img3" for="category_3"></label>
+            <p class="text-gray">기상천외한 숙소</p>
           </div>
           <div class="text-center">
             <input id="category_4" type="radio" name="category" />
-            <label class="category_icon ct_img4" for="category_4"></label>
-            <p>그랜드 피아노</p>
+            <label class="category__icon ct_img4" for="category_4"></label>
+            <p class="text-gray">담무소</p>
           </div>
           <div class="text-center">
             <input id="category_5" type="radio" name="category" />
-            <label class="category_icon ct_img5" for="category_5"></label>
-            <p>기상천외한 숙소</p>
+            <label class="category__icon ct_img5" for="category_5"></label>
+            <p class="text-gray">동굴</p>
           </div>
           <div class="text-center">
             <input id="category_6" type="radio" name="category" />
-            <label class="category_icon ct_img6" for="category_6"></label>
-            <p>담무소</p>
+            <label class="category__icon ct_img6" for="category_6"></label>
+            <p class="text-gray">마차</p>
           </div>
           <div class="text-center">
             <input id="category_7" type="radio" name="category" />
-            <label class="category_icon ct_img7" for="category_7"></label>
-            <p>동굴</p>
+            <label class="category__icon ct_img7" for="category_7"></label>
+            <p class="text-gray">무장애</p>
           </div>
           <div class="text-center">
             <input id="category_8" type="radio" name="category" />
-            <label class="category_icon ct_img8" for="category_8"></label>
-            <p>마차</p>
+            <label class="category__icon ct_img8" for="category_8"></label>
+            <p class="text-gray">보트</p>
           </div>
           <div class="text-center">
             <input id="category_9" type="radio" name="category" />
-            <label class="category_icon ct_img9" for="category_9"></label>
-            <p>마차</p>
+            <label class="category__icon ct_img9" for="category_9"></label>
+            <p class="text-gray">복토 주택</p>
           </div>
           <div class="text-center">
             <input id="category_10" type="radio" name="category" />
-            <label class="category_icon ct_img10" for="category_10"></label>
-            <p>민수</p>
+            <label class="category__icon ct_img10" for="category_10"></label>
+            <p class="text-gray">사막</p>
+          </div>
+          <div class="text-center">
+            <input id="category_11" type="radio" name="category" />
+            <label class="category__icon ct_img11" for="category_11"></label>
+            <p class="text-gray">서핑</p>
+          </div>
+          <div class="text-center">
+            <input id="category_12" type="radio" name="category" />
+            <label class="category__icon ct_img12" for="category_12"></label>
+            <p class="text-gray">속세를 벗어난 숙소</p>
+          </div>
+          <div class="text-center">
+            <input id="category_13" type="radio" name="category" />
+            <label class="category__icon ct_img13" for="category_13"></label>
+            <p class="text-gray">수영장</p>
+          </div>
+          <div class="text-center">
+            <input id="category_14" type="radio" name="category" />
+            <label class="category__icon ct_img14" for="category_14"></label>
+            <p class="text-gray">인기 급상승</p>
+          </div>
+          <div class="text-center">
+            <input id="category_15" type="radio" name="category" />
+            <label class="category__icon ct_img15" for="category_15"></label>
+            <p class="text-gray">최고의 전망</p>
+          </div>
+          <div class="text-center">
+            <input id="category_16" type="radio" name="category" />
+            <label class="category__icon ct_img16" for="category_16"></label>
+            <p class="text-gray">캠핑장</p>
+          </div>
+          <div class="text-center">
+            <input id="category_17" type="radio" name="category" />
+            <label class="category__icon ct_img17" for="category_17"></label>
+            <p class="text-gray">캠핑카</p>
+          </div>
+          <div class="text-center">
+            <input id="category_18" type="radio" name="category" />
+            <label class="category__icon ct_img18" for="category_18"></label>
+            <p class="text-gray">컨테이너하우스</p>
           </div>
         </div>
-        <button id="filter_btn">
+        <button class="category__btn">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -168,7 +214,7 @@
         </button>
       </div>
       <div class="flex flex-jc-c">
-        <div class="place_card">
+        <div class="category__placecard">
           <img src="img/place/place (1).jpg" alt="이미지 없음" />
           <div>
             <div class="flex flex-jc-sb">
@@ -180,7 +226,7 @@
             <p>₩191,974 /박</p>
           </div>
         </div>
-        <div class="place_card">
+        <div class="category__placecard">
           <img src="img/place/place (2).jpg" alt="이미지 없음" />
           <div>
             <div class="flex flex-jc-sb">
@@ -192,7 +238,7 @@
             <p>₩191,974 /박</p>
           </div>
         </div>
-        <div class="place_card">
+        <div class="category__placecard">
           <img src="img/place/place (3).jpg" alt="이미지 없음" />
           <div>
             <div class="flex flex-jc-sb">
@@ -204,7 +250,7 @@
             <p>₩191,974 /박</p>
           </div>
         </div>
-        <div class="place_card">
+        <div class="category__placecard">
           <img src="img/place/place (4).jpg" alt="이미지 없음" />
           <div>
             <div class="flex flex-jc-sb">
@@ -216,7 +262,7 @@
             <p>₩191,974 /박</p>
           </div>
         </div>
-        <div class="place_card">
+        <div class="category__placecard">
           <img src="img/place/place (5).jpg" alt="이미지 없음" />
           <div>
             <div class="flex flex-jc-sb">
@@ -228,7 +274,7 @@
             <p>₩191,974 /박</p>
           </div>
         </div>
-        <div class="place_card">
+        <div class="category__placecard">
           <img src="img/place/place (6).jpg" alt="이미지 없음" />
           <div>
             <div class="flex flex-jc-sb">
@@ -240,7 +286,7 @@
             <p>₩191,974 /박</p>
           </div>
         </div>
-        <div class="place_card">
+        <div class="category__placecard">
           <img src="img/place/place (7).jpg" alt="이미지 없음" />
           <div>
             <div class="flex flex-jc-sb">
@@ -252,7 +298,7 @@
             <p>₩191,974 /박</p>
           </div>
         </div>
-        <div class="place_card">
+        <div class="category__placecard">
           <img src="img/place/place (8).jpg" alt="이미지 없음" />
           <div>
             <div class="flex flex-jc-sb">
@@ -264,7 +310,7 @@
             <p>₩191,974 /박</p>
           </div>
         </div>
-        <div class="place_card">
+        <div class="category__placecard">
           <img src="img/place/place (9).jpg" alt="이미지 없음" />
           <div>
             <div class="flex flex-jc-sb">
@@ -276,7 +322,7 @@
             <p>₩191,974 /박</p>
           </div>
         </div>
-        <div class="place_card">
+        <div class="category__placecard">
           <img src="img/place/place (10).jpg" alt="이미지 없음" />
           <div>
             <div class="flex flex-jc-sb">
@@ -288,7 +334,7 @@
             <p>₩191,974 /박</p>
           </div>
         </div>
-        <div class="place_card">
+        <div class="category__placecard">
           <img src="img/place/place (11).jpg" alt="이미지 없음" />
           <div>
             <div class="flex flex-jc-sb">
@@ -300,8 +346,80 @@
             <p>₩191,974 /박</p>
           </div>
         </div>
-        <div class="place_card">
+        <div class="category__placecard">
           <img src="img/place/place (12).jpg" alt="이미지 없음" />
+          <div>
+            <div class="flex flex-jc-sb">
+              <p>한국 애월읍, 제주시</p>
+              <p>★ 4.81</p>
+            </div>
+            <p>Gwakji Beach</p>
+            <p>11월 10일 ~ 15일</p>
+            <p>₩191,974 /박</p>
+          </div>
+        </div>
+        <div class="category__placecard">
+          <img src="img/place/place (13).jpg" alt="이미지 없음" />
+          <div>
+            <div class="flex flex-jc-sb">
+              <p>한국 애월읍, 제주시</p>
+              <p>★ 4.81</p>
+            </div>
+            <p>Gwakji Beach</p>
+            <p>11월 10일 ~ 15일</p>
+            <p>₩191,974 /박</p>
+          </div>
+        </div>
+        <div class="category__placecard">
+          <img src="img/place/place (14).jpg" alt="이미지 없음" />
+          <div>
+            <div class="flex flex-jc-sb">
+              <p>한국 애월읍, 제주시</p>
+              <p>★ 4.81</p>
+            </div>
+            <p>Gwakji Beach</p>
+            <p>11월 10일 ~ 15일</p>
+            <p>₩191,974 /박</p>
+          </div>
+        </div>
+        <div class="category__placecard">
+          <img src="img/place/place (15).jpg" alt="이미지 없음" />
+          <div>
+            <div class="flex flex-jc-sb">
+              <p>한국 애월읍, 제주시</p>
+              <p>★ 4.81</p>
+            </div>
+            <p>Gwakji Beach</p>
+            <p>11월 10일 ~ 15일</p>
+            <p>₩191,974 /박</p>
+          </div>
+        </div>
+        <div class="category__placecard">
+          <img src="img/place/place (16).jpg" alt="이미지 없음" />
+          <div>
+            <div class="flex flex-jc-sb">
+              <p>한국 애월읍, 제주시</p>
+              <p>★ 4.81</p>
+            </div>
+            <p>Gwakji Beach</p>
+            <p>11월 10일 ~ 15일</p>
+            <p>₩191,974 /박</p>
+          </div>
+        </div>
+        <div class="category__placecard">
+          <img src="img/place/place (17).jpg" alt="이미지 없음" />
+          <div>
+            <div class="flex flex-jc-sb">
+              <p>한국 애월읍, 제주시</p>
+              <p>★ 4.81</p>
+            </div>
+            <p>Gwakji Beach</p>
+            <p>11월 10일 ~ 15일</p>
+            <p>₩191,974 /박</p>
+          </div>
+        </div>
+        <div class="category__placecard">
+          <img src="img/place/place (18).jpg" alt="이미지 없음" />
           <div>
             <div class="flex flex-jc-sb">
               <p>한국 애월읍, 제주시</p>
@@ -352,7 +470,7 @@
           <a href="#">한국어(KR)</a>
         </div>
       </div>
-      <p id="additional_desc" class="text-center">
+      <p class="text-center">
         웹사이트 제공자: Airbnb Ireland UC, private unlimited company, 8 Hanover Quay Dublin 2, D02
         DP23 Ireland | 이사: Dermot Clarke, Killian Pattwell, Andrea Finnegan | VAT 번호: IE9827384L
         | 사업자 등록 번호: IE 511825 | 연락처: terms@airbnb.com, 웹사이트, 080-822-0230 | 호스팅
