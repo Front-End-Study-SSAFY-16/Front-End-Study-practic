@@ -10,124 +10,128 @@
   </head>
   <body>
     <div class="flex flex-col w-full py-5">
-      <!-- header -->
-      <header
-        class="sticky top-0 flex flex-col items-center justify-center gap-5 pb-6 bg-white border-b shadow-sm"
-      >
-        <div
-          id="nav"
-          class="flex items-center justify-around w-full lg:px-14 md:px-12"
-        >
-          <a class="logo basis-1/3" href="./">
-            <!--  -->
-            <img src="./assets/svg/logo.svg" alt="logo" />
-          </a>
-          <nav class="flex items-center justify-center flex-1 gap-3">
-            <a class="text-gray-400 hover:text-black" href="./">숙소</a>
-            <a class="text-gray-400 hover:text-black" href="./">체험</a>
-          </nav>
-          <div class="flex items-center justify-around lg:basis-1/3">
-            <div class="flex items-center gap-1 text-sm">
-              <a class="p-3 rounded-full hover:bg-gray-200" href=""
-                >당신의 공간을 에어비앤비하세요
-              </a>
-              <a class="p-3 rounded-full hover:bg-gray-200" href="">
-                <img src="./assets/svg/language.svg" alt="언어" />
-              </a>
-              <button
-                class="flex gap-2 p-2 border rounded-full shadow hover:bg-gray-200"
-              >
-                <img src="./assets/svg/hambuger.svg" alt="햄버거" />
-                <img src="./assets/svg/human.svg" alt="사람" />
-              </button>
-            </div>
-          </div>
-        </div>
-        <!-- searchBox -->
-        <div
-          id="search_wrapper"
-          class="flex justify-center max-w-screen-md transition md:mt-6 lg:mt-0"
+      <div class="sticky top-0 flex flex-col w-full bg-white shadow-sm">
+        <!-- header -->
+        <header
+          class="flex flex-col items-center justify-center gap-5 pb-6 bg-white border-b"
         >
           <div
-            id="searchBar"
-            class="flex items-center justify-center border rounded-full shadow-lg"
+            id="nav"
+            class="flex items-center justify-around w-full lg:px-14 md:px-12"
           >
-            <section class="border-r cursor-pointer basis-2/5">
-              <div
-                id="location"
-                class="flex flex-col w-full px-4 py-3 transition-all rounded-full hover:bg-gray-100"
-              >
-                <span class="text-xs text-gray-500">여행지</span>
-                <input
-                  class="bg-transparent cursor-pointer"
-                  disabled
-                  type="text"
-                  name=""
-                  id=""
-                  placeholder="여행지 검색"
-                />
+            <a class="logo basis-1/3" href="./">
+              <!--  -->
+              <img src="./assets/svg/logo.svg" alt="logo" />
+            </a>
+            <nav class="flex items-center justify-center flex-1 gap-3">
+              <a class="text-gray-400 hover:text-black" href="./">숙소</a>
+              <a class="text-gray-400 hover:text-black" href="./">체험</a>
+            </nav>
+            <div class="flex items-center justify-around lg:basis-1/3">
+              <div class="flex items-center gap-1 text-sm">
+                <a class="p-3 rounded-full hover:bg-gray-200" href=""
+                  >당신의 공간을 에어비앤비하세요
+                </a>
+                <a class="p-3 rounded-full hover:bg-gray-200" href="">
+                  <img src="./assets/svg/language.svg" alt="언어" />
+                </a>
+                <button
+                  class="flex gap-2 p-2 border rounded-full shadow hover:bg-gray-200"
+                >
+                  <img src="./assets/svg/hambuger.svg" alt="햄버거" />
+                  <img src="./assets/svg/human.svg" alt="사람" />
+                </button>
               </div>
-            </section>
-            <section
-              id="datePicker"
-              class="flex items-center justify-center flex-1 border-r"
-            >
-              <div
-                id="checkIn"
-                class="flex flex-col w-full px-4 py-3 transition-all rounded-full cursor-pointer hover:bg-gray-100"
-                `
-              >
-                <span class="text-xs text-gray-500">체크인</span>
-                <input
-                  class="bg-transparent cursor-pointer"
-                  disabled
-                  type="text"
-                  name=""
-                  id=""
-                  placeholder="체크인"
-                />
-              </div>
-              <div
-                id="checkOut"
-                class="flex flex-col w-full px-4 py-3 transition-all rounded-full cursor-pointer hover:bg-gray-100"
-              >
-                <span class="text-xs text-gray-500">체크아웃</span>
-                <input
-                  class="bg-transparent"
-                  disabled
-                  type="text"
-                  name=""
-                  id=""
-                  placeholder="체크아웃"
-                />
-              </div>
-            </section>
-            <section class="cursor-pointer basis-2/5">
-              <div
-                id="guest"
-                class="flex flex-col w-full px-4 py-3 transition-all rounded-full hover:bg-gray-100"
-              >
-                <span class="text-xs text-gray-500 basis-1/3">여행자</span>
-                <input
-                  class="bg-transparent cursor-pointer"
-                  disabled
-                  type="text"
-                  name=""
-                  id=""
-                  placeholder="게스트 추가"
-                />
-              </div>
-            </section>
+            </div>
           </div>
+          <!-- searchBox -->
+          <div
+            id="search_wrapper"
+            class="flex justify-center max-w-screen-md transition md:mt-6 lg:mt-0"
+          >
+            <div
+              id="searchBar"
+              class="flex items-center justify-center border rounded-full shadow-lg"
+            >
+              <section class="border-r cursor-pointer basis-2/5">
+                <div
+                  id="location"
+                  class="flex flex-col w-full px-4 py-3 transition-all rounded-full hover:bg-gray-100"
+                >
+                  <span class="text-xs text-gray-500">여행지</span>
+                  <input
+                    class="bg-transparent cursor-pointer"
+                    disabled
+                    type="text"
+                    name=""
+                    id=""
+                    placeholder="여행지 검색"
+                  />
+                </div>
+              </section>
+              <section
+                id="datePicker"
+                class="flex items-center justify-center flex-1 border-r"
+              >
+                <div
+                  id="checkIn"
+                  class="flex flex-col w-full px-4 py-3 transition-all rounded-full cursor-pointer hover:bg-gray-100"
+                  `
+                >
+                  <span class="text-xs text-gray-500">체크인</span>
+                  <input
+                    class="bg-transparent cursor-pointer"
+                    disabled
+                    type="text"
+                    name=""
+                    id=""
+                    placeholder="체크인"
+                  />
+                </div>
+                <div
+                  id="checkOut"
+                  class="flex flex-col w-full px-4 py-3 transition-all rounded-full cursor-pointer hover:bg-gray-100"
+                >
+                  <span class="text-xs text-gray-500">체크아웃</span>
+                  <input
+                    class="bg-transparent"
+                    disabled
+                    type="text"
+                    name=""
+                    id=""
+                    placeholder="체크아웃"
+                  />
+                </div>
+              </section>
+              <section class="cursor-pointer basis-2/5">
+                <div
+                  id="guest"
+                  class="flex flex-col w-full px-4 py-3 transition-all rounded-full hover:bg-gray-100"
+                >
+                  <span class="text-xs text-gray-500 basis-1/3">여행자</span>
+                  <input
+                    class="bg-transparent cursor-pointer"
+                    disabled
+                    type="text"
+                    name=""
+                    id=""
+                    placeholder="게스트 추가"
+                  />
+                </div>
+              </section>
+            </div>
+          </div>
+        </header>
+        <!-- category -->
+        <div id="category_wrapper">
+          <ul
+            id="categoryList"
+            class="flex justify-around gap-6 px-5 py-4 flex-nowrap"
+          >
+            <!-- js 에서 처리 -->
+          </ul>
         </div>
-      </header>
-      <!-- category -->
-      <div id="category_wrapper">
-        <ul id="categoryList" class="flex gap-6 px-5 py-4">
-          <!-- js 에서 처리 -->
-        </ul>
       </div>
-
       <!-- main -->
       <main class="py-5 border-b lg:px-14 md:px-12">
         <div id="cardList" class="flex flex-col">

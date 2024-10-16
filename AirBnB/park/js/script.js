@@ -2,8 +2,8 @@ let MOCK_DATA = [];
 let Category_DATA = [];
 
 window.onload = async () => {
-  const data = await fetchData("/AirBnB/park/assets/data/data.json");
-  const category = await fetchData("/AirBnB/park/assets/data/category.json");
+  const data = await fetchData('/AirBnB/park/assets/data/data.json');
+  const category = await fetchData('/AirBnB/park/assets/data/category.json');
   setState(data);
   setCategory(category);
 
@@ -17,7 +17,7 @@ const setCategoryHTML = (data) => {
   <li
     class="py-1 transition border-b-2 border-white cursor-pointer hover:border-b-2 hover:border-black">
     <div class="flex flex-col items-center">
-      <img src=${iconImage} alt="category" />
+      <img src=${iconImage} alt="category" width="24" height="24" />
       <span class="text-sm">${name}</span>
     </div>
   </li>`;
@@ -55,7 +55,7 @@ const setLiHTML = (data) => {
 };
 
 const setCategoryList = () => {
-  const categoryList = document.querySelector("#categoryList");
+  const categoryList = document.querySelector('#categoryList');
 
   Category_DATA.map((data) => {
     categoryList.innerHTML += setCategoryHTML(data);
@@ -63,8 +63,8 @@ const setCategoryList = () => {
 };
 
 const setList = () => {
-  const cardList = document.querySelector("#cardList");
-  const ul = cardList.querySelector("ul");
+  const cardList = document.querySelector('#cardList');
+  const ul = cardList.querySelector('ul');
 
   MOCK_DATA.map((data) => {
     ul.innerHTML += setLiHTML(data);
