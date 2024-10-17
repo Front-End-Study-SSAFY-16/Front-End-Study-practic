@@ -1,9 +1,17 @@
+.fs-10 {
+  font-size: 1rem;
+}
+
 .fs-12 {
   font-size: 1.2rem;
 }
 
 .fs-14 {
   font-size: 1.4rem;
+}
+
+.fs-30 {
+  font-size: 2rem;
 }
 
 .text-gray {
@@ -41,6 +49,23 @@
   align-items: center;
 }
 
+.grid {
+  display: grid;
+}
+
+.grid-jc-c {
+  justify-content: center;
+}
+
+.grid-ai-c {
+  align-content: center;
+  align-items: center;
+}
+
 .shadow {
   box-shadow: 0.2rem 0.2rem 0.3rem rgb(211, 211, 211);
+}
+
+.clickable {
+  cursor: pointer;
 }
