@@ -66,7 +66,8 @@ git commit -m "[홍길동][0주차] 어쩌구 실습"
 |주차|주제| 기간 |
 |:---:|:---:|:---:|
 | 1 | [TodoList](/TodoList) | 24.09.23 ~ 10.04 |
-| 1 | [AirBnB Clone (HTML & CSS 위주)](/AirBnB) | 24.10.05 ~ 10.18 |
+| 2~3 | [AirBnB Clone (HTML & CSS 위주)](/AirBnB) | 24.10.05 ~ 10.18 |
+| 4~5 | [AirBnB Clone (비동기&무한스크롤 구현)](/AirBnB) | 24.10.19 ~ 10.30 |
 
 
 
