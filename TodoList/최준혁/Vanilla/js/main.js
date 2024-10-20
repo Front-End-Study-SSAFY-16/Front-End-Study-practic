@@ -161,3 +161,11 @@ document.addEventListener('DOMContentLoaded', function () {
         loadTodoList(date);
     }
 });
+
+console.log("1: 전역 코드 시작");
+
+setTimeout(() => {
+  console.log("2: 비동기 작업 실행");
+}, 1000);
+
+console.log("3: 전역 코드 끝");
