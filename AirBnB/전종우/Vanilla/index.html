@@ -9,7 +9,7 @@
   </head>
   <body>
     <header>
-      <nav class="flex flex-jc-sb flex-ai-c">
+      <nav class="flex flex-jc-sb flex-ai-c flex-nowrap">
         <div>
           <a href="#">
             <img class="header__logo" src="img/logo.png" />
@@ -19,7 +19,7 @@
           <a href="#">숙소</a>
           <a href="#">체험</a>
         </div>
-        <div class="userinfo flex flex-ai-c">
+        <div class="userinfo flex flex-jc-e flex-ai-c flex-nowrap">
           <a class="fs-14" href="#">당신의 공간을 에어비앤비하세요.</a>
           <button class="userinfo__langbtn">
             <svg
@@ -71,135 +71,53 @@
           </div>
         </div>
       </nav>
-      <div class="searchbar grid shadow">
-        <div class="searchbar__container grid grid-ai-c clickable">
+
+      <div class="searchbar flex flex-jc-c flex-ai-c shadow">
+        <div class="searchbar__container h-100 flex-c flex-jc-c clickable">
           <div class="fs-12">여행지</div>
           <input class="searchbar__input" type="text" placeholder="여행지 검색" />
         </div>
-        <div class="searchbar__container grid grid-ai-c clickable">
-          <div class="fs-12">체크인</div>
-          <div class="fs-14 text-gray">날짜 추가</div>
+        <div class="flex flex-jc-c h-100">
+          <div class="searchbar__container flex-c flex-jc-c clickable">
+            <div class="fs-12">체크인</div>
+            <div class="fs-14 text-gray">날짜 추가</div>
+          </div>
+          <div class="searchbar__container flex-c flex-jc-c clickable">
+            <div class="fs-12">체크아웃</div>
+            <div class="fs-14 text-gray">날짜 추가</div>
+          </div>
         </div>
-        <div class="searchbar__container grid grid-ai-c clickable">
-          <div class="fs-12">체크아웃</div>
-          <div class="fs-14 text-gray">날짜 추가</div>
+        <div class="flex flex-jc-c h-100">
+          <div class="searchbar__container flex flex-jc-sb flex-ai-c clickable">
+            <div class="flex-c flex-jc-c">
+              <div class="fs-12">여행자</div>
+              <div class="fs-14 text-gray">게스트 추가</div>
+            </div>
+            <button class="searchbar__button">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="size-6"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10.5 3.75a6.75 6.75 0 1 0 0 13.5 6.75 6.75 0 0 0 0-13.5ZM2.25 10.5a8.25 8.25 0 1 1 14.59 5.28l4.69 4.69a.75.75 0 1 1-1.06 1.06l-4.69-4.69A8.25 8.25 0 0 1 2.25 10.5Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </button>
+          </div>
         </div>
-        <div class="searchbar__container grid grid-ai-c clickable">
-          <div class="fs-12">여행자</div>
-          <div class="fs-14 text-gray">게스트 추가</div>
-        </div>
-        <button>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="currentColor"
-            class="size-6"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M10.5 3.75a6.75 6.75 0 1 0 0 13.5 6.75 6.75 0 0 0 0-13.5ZM2.25 10.5a8.25 8.25 0 1 1 14.59 5.28l4.69 4.69a.75.75 0 1 1-1.06 1.06l-4.69-4.69A8.25 8.25 0 0 1 2.25 10.5Z"
-              clip-rule="evenodd"
-            />
-          </svg>
-        </button>
       </div>
     </header>
 
     <main>
-      <div class="category flex flex-jc-sb flex-ai-c">
-        <div class="flex flex-jc-c">
-          <div class="text-center">
-            <input id="category_1" type="radio" name="category" />
-            <label class="category__icon ct_img1" for="category_1"></label>
-            <p class="text-gray">골프장</p>
-          </div>
-          <div class="text-center">
-            <input id="category_2" type="radio" name="category" />
-            <label class="category__icon ct_img2" for="category_2"></label>
-            <p class="text-gray">그랜드 피아노</p>
-          </div>
-          <div class="text-center">
-            <input id="category_3" type="radio" name="category" />
-            <label class="category__icon ct_img3" for="category_3"></label>
-            <p class="text-gray">기상천외한 숙소</p>
-          </div>
-          <div class="text-center">
-            <input id="category_4" type="radio" name="category" />
-            <label class="category__icon ct_img4" for="category_4"></label>
-            <p class="text-gray">담무소</p>
-          </div>
-          <div class="text-center">
-            <input id="category_5" type="radio" name="category" />
-            <label class="category__icon ct_img5" for="category_5"></label>
-            <p class="text-gray">동굴</p>
-          </div>
-          <div class="text-center">
-            <input id="category_6" type="radio" name="category" />
-            <label class="category__icon ct_img6" for="category_6"></label>
-            <p class="text-gray">마차</p>
-          </div>
-          <div class="text-center">
-            <input id="category_7" type="radio" name="category" />
-            <label class="category__icon ct_img7" for="category_7"></label>
-            <p class="text-gray">무장애</p>
-          </div>
-          <div class="text-center">
-            <input id="category_8" type="radio" name="category" />
-            <label class="category__icon ct_img8" for="category_8"></label>
-            <p class="text-gray">보트</p>
-          </div>
-          <div class="text-center">
-            <input id="category_9" type="radio" name="category" />
-            <label class="category__icon ct_img9" for="category_9"></label>
-            <p class="text-gray">복토 주택</p>
-          </div>
-          <div class="text-center">
-            <input id="category_10" type="radio" name="category" />
-            <label class="category__icon ct_img10" for="category_10"></label>
-            <p class="text-gray">사막</p>
-          </div>
-          <div class="text-center">
-            <input id="category_11" type="radio" name="category" />
-            <label class="category__icon ct_img11" for="category_11"></label>
-            <p class="text-gray">서핑</p>
-          </div>
-          <div class="text-center">
-            <input id="category_12" type="radio" name="category" />
-            <label class="category__icon ct_img12" for="category_12"></label>
-            <p class="text-gray">속세를 벗어난 숙소</p>
-          </div>
-          <div class="text-center">
-            <input id="category_13" type="radio" name="category" />
-            <label class="category__icon ct_img13" for="category_13"></label>
-            <p class="text-gray">수영장</p>
-          </div>
-          <div class="text-center">
-            <input id="category_14" type="radio" name="category" />
-            <label class="category__icon ct_img14" for="category_14"></label>
-            <p class="text-gray">인기 급상승</p>
-          </div>
-          <div class="text-center">
-            <input id="category_15" type="radio" name="category" />
-            <label class="category__icon ct_img15" for="category_15"></label>
-            <p class="text-gray">최고의 전망</p>
-          </div>
-          <div class="text-center">
-            <input id="category_16" type="radio" name="category" />
-            <label class="category__icon ct_img16" for="category_16"></label>
-            <p class="text-gray">캠핑장</p>
-          </div>
-          <div class="text-center">
-            <input id="category_17" type="radio" name="category" />
-            <label class="category__icon ct_img17" for="category_17"></label>
-            <p class="text-gray">캠핑카</p>
-          </div>
-          <div class="text-center">
-            <input id="category_18" type="radio" name="category" />
-            <label class="category__icon ct_img18" for="category_18"></label>
-            <p class="text-gray">컨테이너하우스</p>
-          </div>
-        </div>
-        <button class="category__btn flex flex-jc-c flex-ai-c">
+      <div class="category flex flex-jc-sb flex-ai-c flex-nowrap">
+        <button class="category__leftbtn">&lt</button>
+        <div class="category__content flex flex-nowrap"></div>
+        <button class="category__rightbtn">&gt</button>
+        <button class="category__filterbtn flex flex-jc-c flex-ai-c">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -213,6 +131,7 @@
           필터
         </button>
       </div>
+
       <div class="flex flex-jc-c">
         <div class="category__placecard">
           <svg
@@ -811,7 +730,7 @@
       </div>
       <div class="recommandinfo">
         <div class="recommandinfo__content">
-          <p class="fs-30">다음 여행을 위한 추천 여행지</p>
+          <p class="fs-20">다음 여행을 위한 추천 여행지</p>
           <div>
             <button class="text-gray">인기</button>
             <button class="text-gray">예술 및 문화</button>
@@ -1002,5 +921,7 @@
         </p>
       </div>
     </footer>
+
+    <script src="js/main.js"></script>
   </body>
 </html>
