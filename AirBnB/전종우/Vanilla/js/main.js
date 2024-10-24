@@ -1,11 +1,14 @@
+const CAROUSEL_SLIDE_SIZE = 500;
+
 window.onload = async function () {
   setCategory();
 
-  const leftBtn = document.querySelector(".category__leftbtn");
-  const rightBtn = document.querySelector(".category__rightbtn");
-
-  leftBtn.addEventListener("click", slideLeft);
-  rightBtn.addEventListener("click", slideRight);
+  document.querySelector(".category__leftbtn").addEventListener("click", function () {
+    slideCarousel(-CAROUSEL_SLIDE_SIZE);
+  });
+  document.querySelector(".category__rightbtn").addEventListener("click", function () {
+    slideCarousel(CAROUSEL_SLIDE_SIZE);
+  });
 };
 
 function setCategory() {
@@ -13,9 +16,10 @@ function setCategory() {
     .then((response) => response.json())
     .then((json) => {
       const content = document.querySelector(".category__content");
+      let innerHTML = "";
 
       json.forEach((element, index) => {
-        content.innerHTML += `
+        innerHTML += `
           <label class="text-center" for="category_${index}">
             <input id="category_${index}" type="radio" name="category" />
             <img class="category__icon" src="${element.img}" alt="" />
@@ -23,33 +27,14 @@ function setCategory() {
           </label>
         `;
       });
+
+      content.innerHTML = innerHTML;
     });
 }
 
-function slideLeft() {
-  const content = document.querySelector(".category__content");
-  const targetLeft = Math.max(content.scrollLeft - 200, 0);
-
-  let timer = setInterval(function () {
-    content.scrollLeft -= 5;
-
-    if (content.scrollLeft <= targetLeft) {
-      clearInterval(timer);
-      console.log("타이머 종료됨");
-    }
-  }, 5);
-}
-
-function slideRight() {
-  const content = document.querySelector(".category__content");
-  const targetRight = Math.min(content.scrollLeft + 200, content.scrollWidth - content.clientWidth);
-
-  let timer = setInterval(function () {
-    content.scrollLeft += 5;
-
-    if (content.scrollLeft >= targetRight) {
-      clearInterval(timer);
-      console.log("타이머 종료됨");
-    }
-  }, 5);
+function slideCarousel(shift) {
+  document.querySelector(".category__content").scrollBy({
+    left: shift,
+    behavior: "smooth",
+  });
 }
