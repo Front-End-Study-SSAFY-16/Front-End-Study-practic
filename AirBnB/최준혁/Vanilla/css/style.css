@@ -342,6 +342,19 @@ h1 {
     }
 }
 
+.skeleton {
+    opacity: 0;
+}
+
+.show{
+    opacity: 100;
+    transition: all 0.5s;
+}
+
+.skeleton-color{
+    background-color: rgb(233, 233, 233);
+}
+
 .img-cover {
     width: 274.75px;
     height: 261px;
@@ -510,4 +523,12 @@ h1 {
 .stick-to-right {
     position: absolute;
     right: 0px;
+}
+
+.display-none {
+    display: none;
+}
+
+.display-show {
+    display: block;
 }
