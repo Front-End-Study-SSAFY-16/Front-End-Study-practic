@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  white-space: nowrap;
 }
 
 html {
@@ -31,15 +32,15 @@ hr {
 
 nav {
   height: 8rem;
-  padding: 0 4rem 0 8rem;
+  padding: 0 7rem;
 }
 
 nav > div {
-  width: 40rem;
+  flex: 1;
 }
 
-nav a {
-  margin-right: 2rem;
+nav > div > * {
+  margin: 0 1rem;
 }
 
 a {
@@ -53,23 +54,19 @@ button {
   background-color: transparent;
 }
 
-input[type="radio"] {
-  display: none;
-}
-
 ul {
   list-style: none;
 }
 
 footer {
   padding: 2rem 3rem;
-  background-color: rgb(240, 240, 240);
+  background-color: rgb(245, 245, 245);
 }
 
 footer a,
 footer p,
 footer span {
-  margin-right: 1rem;
+  margin-right: 0.8rem;
 }
 
 /* ==================================================================== */
@@ -80,7 +77,6 @@ footer span {
 
 .userinfo__langbtn {
   width: 2rem;
-  margin-right: 2rem;
   background-color: transparent;
 }
 
@@ -102,19 +98,19 @@ footer span {
 }
 
 .searchbar {
-  position: relative;
   width: 85rem;
   height: 6.5rem;
   margin: 0 auto;
-
-  grid-template-columns: 2fr 1fr 1fr 2fr;
-  grid-template-rows: 100%;
-
   border: 0.1rem solid rgb(220, 220, 220);
   border-radius: 3rem;
 }
 
+.searchbar > div {
+  flex: 1;
+}
+
 .searchbar__container {
+  flex: 1;
   padding-left: 3rem;
   border-radius: 3rem;
 }
@@ -127,20 +123,23 @@ footer span {
   width: 20rem;
   height: 2.5rem;
   border: none;
+  outline: none;
 }
 
-.searchbar > button {
-  position: absolute;
-  left: 79rem;
-  top: 0.8rem;
+.searchbar__container:hover > .searchbar__input {
+  background-color: rgb(230, 230, 230);
+}
+
+.searchbar__button {
   width: 4.8rem;
   height: 4.8rem;
+  margin: 0 1rem;
   background-color: #ff006a;
   color: white;
   border-radius: 3rem;
 }
 
-.searchbar > button:hover {
+.searchbar__button:hover {
   background-color: #db0a61;
 }
 
@@ -158,176 +157,202 @@ footer span {
   height: 8rem;
   padding: 0 10rem;
   background-color: white;
-  font-size: 1.2rem;
+}
+
+.category__content {
+  flex: 20;
+  min-width: 20rem;
+  overflow: hidden;
+}
+
+.category__leftbtn {
+  min-width: 3rem;
+  min-height: 3rem;
+  border: 0.2rem rgb(230, 230, 230) solid;
+  border-radius: 3rem;
+}
+
+.category__rightbtn {
+  min-width: 3rem;
+  min-height: 3rem;
+  border: 0.2rem rgb(230, 230, 230) solid;
+  border-radius: 3rem;
+}
+
+.category input[type="radio"] {
+  display: none;
+}
+
+.category label {
+  cursor: pointer;
+  margin: 1rem 2.5rem 0;
+  padding: 1rem 0;
+  border-bottom: 0.2rem solid transparent;
 }
 
 .category__icon {
   width: 2.5rem;
   height: 2.5rem;
-  margin: 0 3rem;
-  background-size: cover;
-  display: inline-block;
-  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.2s;
 }
 
-.category__btn {
-  width: 8rem;
+.category input[type="radio"]:checked + img {
+  opacity: 1;
+}
+
+.category label:has(input[type="radio"]:checked) {
+  border-bottom: 0.2rem solid black;
+}
+
+.category__filterbtn {
   height: 5rem;
+  flex: 1;
+  margin: 0 1rem;
   background-color: white;
   border: 0.1rem solid rgb(220, 220, 220);
   border-radius: 1rem;
 }
 
-.category__btn svg {
+.category__filterbtn > svg {
   width: 2rem;
-  margin-right: 1rem;
+  margin-right: 0.5rem;
 }
 
-.category__placecard {
+.place__card {
   position: relative;
   margin: 2rem 1.2rem;
 }
 
-.category__placecard img {
+.place__card > img {
   width: 26rem;
   height: 26rem;
   object-fit: cover;
   border-radius: 1rem;
 }
 
-.likeBtn {
+.place__card__info {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  width: 10rem;
+  height: 2.8rem;
+  line-height: 2.8rem;
+  border-radius: 3rem;
+  background-color: white;
+  cursor: pointer;
+}
+
+.place__card__likeBtn {
   position: absolute;
   top: 1.5rem;
   left: 22rem;
   transition: all 0.1s;
 }
 
-.likeBtn path {
+.place__card__likeBtn path {
   stroke: white;
   stroke-width: 2rems;
 }
 
-.likeBtn:hover {
+.place__card__likeBtn:hover {
   cursor: pointer;
   transform: scale(1.1);
 }
 
+.moreview {
+  margin: 3rem 0;
+}
+
+.moreview__btn {
+  width: 10rem;
+  height: 5rem;
+  margin: 2rem 0;
+  border-radius: 1rem;
+  background-color: black;
+}
+
 .recommandinfo {
-  background-color: rgb(240, 240, 240);
+  background-color: rgb(245, 245, 245);
   border-bottom: 0.1rem solid rgb(220, 220, 220);
   padding: 4rem 0;
 }
 
 .recommandinfo__content {
-  width: 96rem;
+  width: 110rem;
   margin: 0 auto;
 }
 
-.recommandinfo__content button {
-  font-size: 1.6rem;
-  margin: 2rem 2rem 3rem 0;
+.recommandinfo__category {
+  margin-bottom: 1rem;
+  border-bottom: 0.1rem solid rgb(220, 220, 220);
+}
+
+.recommandinfo__category input[type="radio"] {
+  display: none;
+}
+
+.recommandinfo__category > label {
+  display: inline-block;
+  cursor: pointer;
+  padding: 1.2rem 0;
+  margin: 0 1rem;
+  border-bottom: 0.2rem solid transparent;
+  opacity: 0.6;
+  transition: opacity 0.2s;
+}
+
+.recommandinfo__category > label:first-child {
+  margin-left: -0.1rem;
+}
+
+.recommandinfo__category > label:has(input[type="radio"]:checked) {
+  opacity: 1;
+  border-bottom: 0.2rem solid black;
 }
 
 .recommandinfo__content li {
-  width: 12rem;
-  margin: 0 4rem 1rem 0;
+  flex-basis: 18rem;
+  margin: 1rem 0;
+  overflow: hidden;
 }
 
 .recommandinfo__content li p {
   text-overflow: ellipsis;
-  white-space: nowrap;
   overflow: hidden;
 }
 
 .additionalinfo {
-  background-color: rgb(240, 240, 240);
-  border-bottom: 0.1rem solid rgb(220, 220, 220);
-  padding: 4rem 0;
-}
-
-.additionalinfo__content li {
-  width: 25rem;
-  margin: 0 4rem 1rem 0;
+  background-color: rgb(245, 245, 245);
 }
 
 .additionalinfo__content {
-  width: 96rem;
+  width: 110rem;
   margin: 0 auto;
+  border-bottom: 0.1rem solid rgb(220, 220, 220);
+  padding: 2rem 0 4rem 0;
 }
 
-.footer {
-  width: 96rem;
+.additionalinfo__content li {
+  flex-basis: 36rem;
+  margin: 0.6rem 0;
+}
+
+.policyinfo {
+  width: 110rem;
+  height: 6rem;
   margin: 0 auto;
+  border-bottom: 0.1rem solid rgb(220, 220, 220);
+  padding: 2rem 0 1rem 0;
 }
 
-.ct_img1 {
-  background-image: url("../img/category/골프장.jpg");
+.policyinfo svg {
+  width: 2rem;
+  margin: 0 0.5rem;
 }
 
-.ct_img2 {
-  background-image: url("../img/category/그랜드 피아노.jpg");
-}
-
-.ct_img3 {
-  background-image: url("../img/category/기상천외한 숙소.jpg");
-}
-
-.ct_img4 {
-  background-image: url("../img/category/담무소.jpg");
-}
-
-.ct_img5 {
-  background-image: url("../img/category/동굴.jpg");
-}
-
-.ct_img6 {
-  background-image: url("../img/category/마차.jpg");
-}
-
-.ct_img7 {
-  background-image: url("../img/category/무장애.jpg");
-}
-
-.ct_img8 {
-  background-image: url("../img/category/보트.jpg");
-}
-
-.ct_img9 {
-  background-image: url("../img/category/복토 주택.jpg");
-}
-
-.ct_img10 {
-  background-image: url("../img/category/사막.jpg");
-}
-
-.ct_img11 {
-  background-image: url("../img/category/서핑.jpg");
-}
-
-.ct_img12 {
-  background-image: url("../img/category/속세를 벗어난 숙소.jpg");
-}
-
-.ct_img13 {
-  background-image: url("../img/category/수영장.jpg");
-}
-
-.ct_img14 {
-  background-image: url("../img/category/인기 급상승.jpg");
-}
-
-.ct_img15 {
-  background-image: url("../img/category/최고의 전망.jpg");
-}
-
-.ct_img16 {
-  background-image: url("../img/category/캠핑장.jpg");
-}
-
-.ct_img17 {
-  background-image: url("../img/category/캠핑카.jpg");
-}
-
-.ct_img18 {
-  background-image: url("../img/category/컨테이너하우스.jpg");
+.descinfo {
+  width: 110rem;
+  margin: 1rem auto 1rem;
+  white-space: normal;
 }

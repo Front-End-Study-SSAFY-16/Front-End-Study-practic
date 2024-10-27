@@ -1,0 +1,115 @@
+[
+  {
+    "id": 1,
+    "name": "골프장",
+    "img": "img/category/골프장.jpg"
+  },
+
+  {
+    "id": 2,
+    "name": "그랜드 피아노",
+    "img": "img/category/그랜드 피아노.jpg"
+  },
+
+  {
+    "id": 3,
+    "name": "기상천외한 숙소",
+    "img": "img/category/기상천외한 숙소.jpg"
+  },
+
+  {
+    "id": 5,
+    "name": "동굴",
+    "img": "img/category/동굴.jpg"
+  },
+
+  {
+    "id": 6,
+    "name": "마차",
+    "img": "img/category/마차.jpg"
+  },
+
+  {
+    "id": 7,
+    "name": "무장애",
+    "img": "img/category/무장애.jpg"
+  },
+
+  {
+    "id": 8,
+    "name": "보트",
+    "img": "img/category/보트.jpg"
+  },
+
+  {
+    "id": 9,
+    "name": "복토 주택",
+    "img": "img/category/복토 주택.jpg"
+  },
+
+  {
+    "id": 10,
+    "name": "사막",
+    "img": "img/category/사막.jpg"
+  },
+
+  {
+    "id": 11,
+    "name": "서핑",
+    "img": "img/category/서핑.jpg"
+  },
+
+  {
+    "id": 12,
+    "name": "속세를 벗어난 숙소",
+    "img": "img/category/속세를 벗어난 숙소.jpg"
+  },
+
+  {
+    "id": 13,
+    "name": "수영장",
+    "img": "img/category/수영장.jpg"
+  },
+
+  {
+    "id": 14,
+    "name": "인기 급상승",
+    "img": "img/category/인기 급상승.jpg"
+  },
+
+  {
+    "id": 15,
+    "name": "최고의 전망",
+    "img": "img/category/최고의 전망.jpg"
+  },
+
+  {
+    "id": 16,
+    "name": "캠핑장",
+    "img": "img/category/캠핑장.jpg"
+  },
+
+  {
+    "id": 17,
+    "name": "캠핑카",
+    "img": "img/category/캠핑카.jpg"
+  },
+
+  {
+    "id": 18,
+    "name": "컨테이너하우스",
+    "img": "img/category/컨테이너하우스.jpg"
+  },
+
+  {
+    "id": 19,
+    "name": "트리하우스",
+    "img": "img/category/트리하우스.jpg"
+  },
+
+  {
+    "id": 20,
+    "name": "해변 바로 앞",
+    "img": "img/category/해변 바로 앞.jpg"
+  }
+]
