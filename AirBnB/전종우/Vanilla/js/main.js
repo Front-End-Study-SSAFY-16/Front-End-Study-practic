@@ -1,4 +1,9 @@
 const CAROUSEL_SLIDE_SIZE = 500;
+const MAX_PAGE = 10;
+const MAX_CONTENT_COUNT_PER_PAGE = 18;
+
+let curPage = 0;
+let isFetching = false;
 
 window.onload = async function () {
   loadCategory();
@@ -9,6 +14,22 @@ window.onload = async function () {
   });
   document.querySelector(".category__rightbtn").addEventListener("click", function () {
     slideCarousel(CAROUSEL_SLIDE_SIZE);
+  });
+  document.querySelector(".moreview__btn").addEventListener("click", function () {
+    window.addEventListener("scroll", function () {
+      if (isFetching || curPage >= MAX_PAGE) {
+        return;
+      }
+
+      // console.log(window.innerHeight, window.scrollY, document.body.offsetHeight);
+
+      if (window.innerHeight + window.scrollY >= 0.9 * document.body.offsetHeight) {
+        loadContent();
+      }
+    });
+
+    loadContent();
+    document.querySelector(".moreview").remove();
   });
 };
 
@@ -34,18 +55,22 @@ function loadCategory() {
 }
 
 function loadContent() {
+  isFetching = true;
+
   fetch("data/place.json")
     .then((response) => response.json())
     .then((json) => {
       const content = document.querySelector(".place");
       let innerHTML = "";
 
-      for (let i = 0; i < json.count; ++i) {
-        const randNum = parseInt(2 * Math.random());
+      for (let i = 0; i < MAX_CONTENT_COUNT_PER_PAGE; ++i) {
+        innerHTML += `<div class="place__card">`;
+
+        if (Math.random() <= 0.4) {
+          innerHTML += `<div class="place__card__info fs-14 text-center align-middle shadow">게스트 선호</div>`;
+        }
 
         innerHTML += `
-        <div class="place__card">
-          <div class="place__card__info fs-14 text-center align-middle shadow">게스트 선호</div>
           <img src="img/place/place (${i + 1}).jpg" alt="" />
           <svg
             class="place__card__likeBtn"
@@ -69,18 +94,20 @@ function loadContent() {
           </svg>
           <div>
             <div class="flex flex-jc-sb flex-ai-c">
-              <p>${json.content.title}</p>
-              <p>★ ${json.content.rating}</p>
+              <p>${json.title}</p>
+              <p>★ ${json.rating}</p>
             </div>
-            <p class="text-gray">${json.content.category}</p>
-            <p class="text-gray">${json.content.period}</p>
-            <p><b>₩${json.content.price.toLocaleString()}</b> /박</p>
+            <p class="text-gray">${json.category}</p>
+            <p class="text-gray">${json.period}</p>
+            <p><b>₩${json.price.toLocaleString()}</b> /박</p>
           </div>
         </div>
         `;
       }
 
-      content.innerHTML = innerHTML;
+      content.innerHTML += innerHTML;
+      ++curPage;
+      isFetching = false;
     });
 }
 
