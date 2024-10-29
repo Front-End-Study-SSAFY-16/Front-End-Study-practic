@@ -2,9 +2,9 @@ let roomList = [];
 
 const setLiHTML = (data) => {
   const { image_uri, name, dist, date, price, rating } = data;
-  return `<li class="room flex flex-col gap-2 transition">
-              <div class="images">
-                <img class="w-80 rounded-xl" src=${image_uri} alt="" />
+  return `<li class="max-w-full room flex flex-col gap-2 transition">
+              <div class="images w-full">
+                <img class="object-cover w-full h-full aspect-square rounded-xl" src=${image_uri} alt="" />
               </div>
               <div class="room_info grid grid-cols-[70%_30%]">
                 <div class="room_info_title col-start-1">
@@ -32,11 +32,11 @@ const setLiHTML = (data) => {
 };
 
 const setList = () => {
-  const cardList = document.querySelector('#cardList');
-  const ul = cardList.querySelector('ul');
+  const cardList = document.querySelector("#cardList");
+  const ul = cardList.querySelector("ul");
 
   roomList.map((data) => {
-    let list = '';
+    let list = "";
     list += setLiHTML(data);
     ul.innerHTML += list;
   });

@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "image_uri": "./assets/images/image.png",
+    "image_uri": "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTE4NzE3Nzg1NDA2MjM5NzY2NQ%3D%3D/original/6989d581-3f67-4cd9-8cb6-5f5c226aedc6.png?im_w=1440&im_q=highq",
     "name": "룸 이름 1",
     "dist": 10,
     "date": "10월 20일~25일",
@@ -10,165 +10,128 @@
   },
   {
     "id": 2,
-    "image_uri": "./assets/images/image.png",
-    "name": "룸 이름 1",
-    "dist": 10,
-    "date": "10월 20일~25일",
-    "price": 100000,
-    "rating": "4.88"
+    "image_uri": "https://a0.muscache.com/im/pictures/aa715257-38ff-45ff-8bb7-3a7e321cf385.jpg?im_w=720",
+    "name": "룸 이름 2",
+    "dist": 8,
+    "date": "10월 21일~26일",
+    "price": 85000,
+    "rating": "4.73"
   },
-  {
-    "id": 2,
-    "image_uri": "./assets/images/image.png",
-    "name": "룸 이름 1",
-    "dist": 10,
-    "date": "10월 20일~25일",
-    "price": 100000,
-    "rating": "4.88"
-  },
-
   {
     "id": 3,
-    "image_uri": "./assets/images/image.png",
-    "name": "룸 이름 1",
-    "dist": 10,
-    "date": "10월 20일~25일",
-    "price": 100000,
-    "rating": "4.88"
+    "image_uri": "https://a0.muscache.com/im/pictures/hosting/Hosting-1054423266192008941/original/4d679ace-8a31-4799-83a1-9a17d68b48e0.jpeg?im_w=720",
+    "name": "룸 이름 3",
+    "dist": 15,
+    "date": "10월 22일~27일",
+    "price": 95000,
+    "rating": "4.65"
   },
   {
     "id": 4,
-    "image_uri": "./assets/images/image.png",
-    "name": "룸 이름 1",
-    "dist": 10,
-    "date": "10월 20일~25일",
-    "price": 100000,
-    "rating": "4.88"
+    "image_uri": "https://a0.muscache.com/im/pictures/93119474/ac6fa0cc_original.jpg?im_w=720",
+    "name": "룸 이름 4",
+    "dist": 7,
+    "date": "10월 23일~28일",
+    "price": 110000,
+    "rating": "4.90"
   },
   {
     "id": 5,
-    "image_uri": "./assets/images/image.png",
-    "name": "룸 이름 1",
-    "dist": 10,
-    "date": "10월 20일~25일",
-    "price": 100000,
-    "rating": "4.88"
+    "image_uri": "https://a0.muscache.com/im/pictures/miso/Hosting-39899038/original/1a741c81-292d-4a42-a2be-f506f7e334dd.jpeg?im_w=720",
+    "name": "룸 이름 5",
+    "dist": 5,
+    "date": "10월 24일~29일",
+    "price": 102000,
+    "rating": "4.55"
   },
   {
     "id": 6,
-    "image_uri": "./assets/images/image.png",
-    "name": "룸 이름 1",
-    "dist": 10,
-    "date": "10월 20일~25일",
-    "price": 100000,
-    "rating": "4.88"
+    "image_uri": "https://a0.muscache.com/im/pictures/a0b0c9b4-4273-4f17-8fb6-4592b48501ca.jpg?im_w=720",
+    "name": "룸 이름 6",
+    "dist": 12,
+    "date": "10월 25일~30일",
+    "price": 95000,
+    "rating": "4.82"
   },
   {
     "id": 7,
-    "image_uri": "./assets/images/image.png",
-    "name": "룸 이름 1",
-    "dist": 10,
-    "date": "10월 20일~25일",
-    "price": 100000,
-    "rating": "4.88"
+    "image_uri": "https://a0.muscache.com/im/pictures/a9f02407-0d61-427c-bca2-13d7a0652da4.jpg?im_w=720",
+    "name": "룸 이름 7",
+    "dist": 3,
+    "date": "10월 26일~31일",
+    "price": 88000,
+    "rating": "4.95"
   },
   {
     "id": 8,
-    "image_uri": "./assets/images/image.png",
-    "name": "룸 이름 1",
-    "dist": 10,
-    "date": "10월 20일~25일",
-    "price": 100000,
-    "rating": "4.88"
+    "image_uri": "https://a0.muscache.com/im/pictures/miso/Hosting-39899038/original/1a741c81-292d-4a42-a2be-f506f7e334dd.jpeg?im_w=720",
+    "name": "룸 이름 8",
+    "dist": 14,
+    "date": "10월 27일~11월 1일",
+    "price": 103000,
+    "rating": "4.78"
   },
   {
     "id": 9,
-    "image_uri": "./assets/images/image.png",
-    "name": "룸 이름 1",
-    "dist": 10,
-    "date": "10월 20일~25일",
-    "price": 100000,
-    "rating": "4.88"
+    "image_uri": "https://a0.muscache.com/im/pictures/3ae64232-4838-4aba-81a1-300b4b001cb2.jpg?im_w=720",
+    "name": "룸 이름 9",
+    "dist": 9,
+    "date": "10월 28일~11월 2일",
+    "price": 99000,
+    "rating": "4.85"
   },
   {
     "id": 10,
-    "image_uri": "./assets/images/image.png",
-    "name": "룸 이름 1",
-    "dist": 10,
-    "date": "10월 20일~25일",
-    "price": 100000,
-    "rating": "4.88"
+    "image_uri": "https://a0.muscache.com/im/pictures/miso/Hosting-713419345905850852/original/1a001eb0-466a-4e7d-bf91-5f99067a31ee.jpeg?im_w=720",
+    "name": "룸 이름 10",
+    "dist": 6,
+    "date": "10월 29일~11월 3일",
+    "price": 105000,
+    "rating": "4.68"
   },
   {
-    "id": 10,
-    "image_uri": "./assets/images/image.png",
-    "name": "룸 이름 1",
-    "dist": 10,
-    "date": "10월 20일~25일",
-    "price": 100000,
-    "rating": "4.88"
+    "id": 11,
+    "image_uri": "https://a0.muscache.com/im/pictures/hosting/Hosting-1082214200394257718/original/ac8bee48-68d7-4e34-b5ef-e6f2883d720f.jpeg?im_w=720",
+    "name": "룸 이름 11",
+    "dist": 15,
+    "date": "11월 1일~6일",
+    "price": 87000,
+    "rating": "4.90"
   },
   {
-    "id": 10,
-    "image_uri": "./assets/images/image.png",
-    "name": "룸 이름 1",
-    "dist": 10,
-    "date": "10월 20일~25일",
-    "price": 100000,
-    "rating": "4.88"
+    "id": 12,
+    "image_uri": "https://a0.muscache.com/im/pictures/miso/Hosting-39899038/original/1a741c81-292d-4a42-a2be-f506f7e334dd.jpeg?im_w=720",
+    "name": "룸 이름 12",
+    "dist": 11,
+    "date": "11월 2일~7일",
+    "price": 93000,
+    "rating": "4.76"
   },
   {
-    "id": 10,
-    "image_uri": "./assets/images/image.png",
-    "name": "룸 이름 1",
-    "dist": 10,
-    "date": "10월 20일~25일",
-    "price": 100000,
-    "rating": "4.88"
+    "id": 13,
+    "image_uri": "https://a0.muscache.com/im/pictures/miso/Hosting-1151909047551947700/original/11f228e7-4274-4322-89b1-c151b31366d4.jpeg?im_w=720",
+    "name": "룸 이름 13",
+    "dist": 5,
+    "date": "11월 3일~8일",
+    "price": 98000,
+    "rating": "4.69"
   },
   {
-    "id": 10,
-    "image_uri": "./assets/images/image.png",
-    "name": "룸 이름 1",
-    "dist": 10,
-    "date": "10월 20일~25일",
-    "price": 100000,
-    "rating": "4.88"
+    "id": 14,
+    "image_uri": "https://a0.muscache.com/im/pictures/27a83900-8292-43a5-98ee-1d10bec9e6fe.jpg?im_w=720",
+    "name": "룸 이름 14",
+    "dist": 7,
+    "date": "11월 4일~9일",
+    "price": 102000,
+    "rating": "4.60"
   },
   {
-    "id": 10,
-    "image_uri": "./assets/images/image.png",
-    "name": "룸 이름 1",
-    "dist": 10,
-    "date": "10월 20일~25일",
-    "price": 100000,
-    "rating": "4.88"
-  },
-  {
-    "id": 10,
-    "image_uri": "./assets/images/image.png",
-    "name": "룸 이름 1",
-    "dist": 10,
-    "date": "10월 20일~25일",
-    "price": 100000,
-    "rating": "4.88"
-  },
-  {
-    "id": 10,
-    "image_uri": "./assets/images/image.png",
-    "name": "룸 이름 1",
-    "dist": 10,
-    "date": "10월 20일~25일",
-    "price": 100000,
-    "rating": "4.88"
-  },
-  {
-    "id": 10,
-    "image_uri": "./assets/images/image.png",
-    "name": "룸 이름 1",
-    "dist": 10,
-    "date": "10월 20일~25일",
-    "price": 100000,
-    "rating": "4.88"
+    "id": 15,
+    "image_uri": "https://a0.muscache.com/im/pictures/miso/Hosting-1233614536902928904/original/525a162c-8f17-42d9-9c5d-6354e1346325.jpeg?im_w=720",
+    "name": "룸 이름 15",
+    "dist": 6,
+    "date": "11월 5일~10일",
+    "price": 109000,
+    "rating": "4.67"
   }
 ]
