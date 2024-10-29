@@ -4,7 +4,9 @@ const setCategoryList = () => {
   const categoryList = document.querySelector('#categoryList');
 
   Category_DATA.map((data) => {
-    categoryList.innerHTML += setCategoryHTML(data);
+    let list = '';
+    list += setCategoryHTML(data);
+    categoryList.innerHTML += list;
   });
 };
 
@@ -42,7 +44,7 @@ const handleRightButton = () => {
   // scrollMax - offsetWidth == Math.round(curScroll)
   categoryList.scrollTo({
     left:
-      scrollMax - offsetWidth == Math.round(curScroll) ? 0 : curScroll + 200,
+      scrollMax - offsetWidth == Math.round(curScroll) ? 0 : curScroll + 400,
     behavior: 'smooth',
   });
 };
@@ -52,7 +54,7 @@ const handleLeftButton = () => {
   const curScroll = categoryList.scrollLeft;
 
   categoryList.scrollTo({
-    left: curScroll - 200,
+    left: curScroll - 300,
     behavior: 'smooth',
   });
 };

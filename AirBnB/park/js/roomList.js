@@ -36,7 +36,9 @@ const setList = () => {
   const ul = cardList.querySelector('ul');
 
   roomList.map((data) => {
-    ul.innerHTML += setLiHTML(data);
+    let list = '';
+    list += setLiHTML(data);
+    ul.innerHTML += list;
   });
 };
 
