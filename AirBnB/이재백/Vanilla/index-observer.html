@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Airbnb Clone</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100">
+    <nav class="flex items-center justify-between px-6 bg-white shadow-md">
+      <div>
+        <img
+          src="https://www.logo.wine/a/logo/Airbnb/Airbnb-Logo.wine.svg"
+          alt="Airbnb Logo"
+          class="w-36"
+        />
+      </div>
+      <div class="flex items-center space-x-6">
+        <button class="text-lg">🌙</button>
+        <button class="text-lg bg-green-500 text-white px-3 py-1 rounded-full">
+          이
+        </button>
+      </div>
+    </nav>
+
+    <div
+      id="listings-container"
+      class="max-w-7xl mx-auto p-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+    ></div>
+    <div id="load-more" class="w-full h-12"></div>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script>
+    const container = document.getElementById("listings-container");
+    let data = []; // JSON 데이터를 담을 배열
+    let currentIndex = 0;
+    const itemsPerPage = 10; // 한 번에 로드할 아이템 수
+
+    // JSON 데이터를 axios로 가져오기
+    async function fetchData() {
+      const response = await axios.get("list.json"); // 실제 JSON 파일 경로로 변경
+      data = response.data;
+      loadMoreItems(); // 처음 데이터를 로드
+    }
+
+    // 데이터 로드 함수
+    function loadMoreItems() {
+      const endIndex = currentIndex + itemsPerPage;
+      const itemsToLoad = data.slice(currentIndex, endIndex);
+
+      itemsToLoad.forEach((item) => {
+        const itemHTML = `
+        <div class="bg-white shadow-md rounded-lg overflow-hidden">
+          <img src="${item.image}" alt="${item.name}" class="w-full h-48 object-cover" />
+          <div class="p-4">
+            <div class="flex justify-between items-center">
+              <h3 class="text-lg font-bold">${item.name}</h3>
+              <div class="flex items-center">
+                <span class="text-sm text-gray-500">★</span>
+                <span class="text-sm ml-1">${item.rating}</span>
+              </div>
+            </div>
+            <p class="text-gray-500">${item.location}</p>
+            <p class="text-lg font-semibold">${item.price}</p>
+          </div>
+        </div>`;
+        container.insertAdjacentHTML("beforeend", itemHTML);
+      });
+
+      currentIndex += itemsPerPage; // 다음 로드 시작 인덱스 업데이트
+    }
+
+    // Intersection Observer 설정
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          loadMoreItems();
+        }
+      },
+      {
+        rootMargin: "0px 0px 100px 0px", // 하단 여유 공간을 설정
+      }
+    );
+
+    // 로드 대상 요소를 관찰
+    observer.observe(document.getElementById("load-more"));
+
+    // 초기 데이터 fetch
+    fetchData();
+  </script>
+</html>
