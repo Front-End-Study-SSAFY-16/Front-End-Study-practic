@@ -532,3 +532,8 @@ h1 {
 .display-show {
     display: block;
 }
+
+#list-end {
+    height: 3px;
+    visibility: hidden;
+}

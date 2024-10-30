@@ -3,12 +3,27 @@ let data = []
 let curPage = 0;
 const perPage = 20;
 let allDataLoaded = false;
-let isLoadingSkeleton = false;
 
-export function init(locationList) {
-    data = locationList;
-    showData();
+const listEnd = document.querySelector('#list-end');
+const options = {
+    root: null,
+    rootMargin: '0px 0px 0px 0px',
+    threshold: 0,
 };
+
+const onIntersect = (entries, observer) => {
+    entries.forEach((entry) => {
+        if (allDataLoaded) {
+            console.log("done");
+            observer.unobserve(listEnd);
+            return;
+        }
+        if (entry.isIntersecting) {
+            console.log("loadingData");
+            showData();
+        }
+    })
+}
 
 export function showData() {
     const skeletonItems = Array.from({ length: perPage }, () => `
@@ -88,17 +103,11 @@ export function showData() {
         console.log(data.length);
         allDataLoaded = true;
     }
+    curPage++;
 }
 
-function loadMoreData() {
-    if (allDataLoaded) return;
-    
-    if ((window.innerHeight + window.scrollY) >= (document.body.offsetHeight - 20)) {
-        curPage++;
-        showData();
-    }
-}
-
-window.addEventListener('scroll', loadMoreData);
-
-window.addEventListener('resize', loadMoreData);
+export function init(locationList) {
+    data = locationList;
+    const observer = new IntersectionObserver(onIntersect, options);
+    observer.observe(listEnd);
+};
